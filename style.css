@@ -1,0 +1,107 @@
+
+body{
+    background-color: #FAF7F0;
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav_title{
+    justify-items: start;
+}
+
+
+.nav_bar{
+    background-color: yellow;
+
+}
+button.nav_button:hover{
+    background-color: rgb(145, 145, 216);
+}
+.imposter{
+    transform: rotate(-20deg);
+}
+.bg_whitecolor{
+    height: 600px;
+    background-color: white;
+}
+.cercle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #EC1E20;
+}
+.red_line{
+    height: 600px;
+    border-left: 1px solid #EC1E20;
+}
+.blog_width{
+    width: 270px;
+}
+.your_o{
+    transform: rotate(-5deg);
+}
+.heart {
+    background-color: black;
+    display: inline-block;
+    height: 30px;
+    margin: 0 10px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    width: 30px;
+  }
+  
+  .heart:before,
+  .heart:after {
+    content: "";
+    background-color: black;
+    border-radius: 50%;
+    height: 30px;
+    position: absolute;
+    width: 30px;
+  }
+  
+  .heart:before {
+    top: -15px;
+    left: 0;
+  }
+  
+  .heart:after {
+    left: 15px;
+    top: 0;
+  }
+  .love{
+      color: red;
+  }
+  .percent{
+      background-color: black;
+      transform: rotate(-5deg);
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .servicenow_color{
+      color: #034ea2;
+  }
+  .key{
+    transform: rotate(-5deg);
+    background-color: black;
+  }
+  .under_line{
+    border: 1px solid black;
+  }
+

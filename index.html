@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <nav class="bg-white">
+        <div class="container">
+            <div class="d-flex">
+                <div class="nav_title p-3">
+                    <h2>CLEANVIEW</h2>
+                </div>
+                <div class="nav_bar ms-auto">
+                    <h3 class="p-3"><b>GET THE FULL REPORT </b> <button type="button" class="nav_button btn btn-light">DOWNLOAD</button></h3>
+                </div>
+            </div>
+            <div class="nav_year mt-5 me-5 mb-2">
+                <svg width="240" height="71" viewBox="0 0 240 71" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="240" height="71" fill="url(#pattern0)"/>
+                    <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0" transform="scale(0.00416667 0.0140845)"/>
+                    </pattern>
+                    <image id="image0" width="240" height="71" xlink:href="data:image/png;base64,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"/>
+                    </defs>
+                </svg>
+                                                
+            </div>
+            <h1><b>PRODUCT</b></h1>
+        </div>
+        
+    </nav>
+
+    <section class="container">
+        <h1><b>BENCHMARKS</b></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Consequatur, voluptatem modi quisquam nemo labore officiis<br/> quia doloribus consectetur sit temporibus laboriosam quam<br/> unde corrupti sunt at accusantium deleniti? Molestiae, odio!</p>
+        <span>see if you're an <span class="bg-dark text-white ps-2 imposter"> imposter. </span>and get the full report</span>
+        <br/>
+        <button type="button" class="btn btn-primary mt-4 border border-dark">DOWNLOAD THE FULL REPORT</button>
+
+    </section>
+
+    <section>
+        <div class="container mt-5">
+            <div class="row justify-content-start">
+              <div class="col-md-4 bg_whitecolor col-sm-12">
+                <div class="cercle">
+                    <div class="red_line ms-5">
+                        <div class="ps-3">
+                            <p class="bg-warning">Blogs</p>
+                            <p>introduction</p>
+                            <div class="blog_width">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos quia animi minima obcaecati nobis </p>
+                            </div>
+                            <div class="blog_width">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos quia animi minima </p>
+                            </div>
+                            <div class="blog_width">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos quia animi minima obcaecati nobis </p>
+                            </div>
+                            <div class="blog_width">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos quia animi minima obcaecati nobis </p>
+                            </div>
+                            <div class="blog_width">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                            </div>
+                            <div class="blog_width">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                            </div>
+                            <p>Conclusion</p>
+                        </div>
+                    </div>
+                    <div class="cercle"></div>
+                </div>
+                
+              </div>
+              <div class="col-md-8 col-sm-12 p-4">
+                <h1><b>WHAT'S NEW</b></h1>
+                <h1><b>THIS YEAR:</b></h1>
+                <p><b>We put the newest data the magnitying glass and found some clues for you!</b></p>
+                <ul>
+                    <li>How to rethink your appraach to building a growth-driven product</li>
+                    <li>How to rethink your appraach to building a growth-driven product</li>
+                    <li>How to rethink your appraach to building a growth-driven product</li>
+                </ul>
+                <div class="d-flex">
+                    <p>Ready to find out where </p>
+                    <h4 class="bg-dark text-white me-2 ms-2 pe-2 ps-2 your_o">your organization </h4>
+                    <p>execels? <b>Dive on in.</b></p>
+                </div>
+                <h1><b>OUR PARTNERS</b></h1>
+                <h1><b>we <span class="love">L <span class="heart"></span> V E</span></b></h1>
+                    
+                <div class="row justify-content-start">
+                    <div class="col m-5">
+                        <svg width="171" height="61" viewBox="0 0 171 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M28.9375 31.4688C28.9375 36.6146 27.7604 40.7604 25.4062 43.9062C23.0521 47.0521 19.8646 48.625 15.8438 48.625C11.7396 48.625 8.51042 47.3229 6.15625 44.7188V61H0.375V14.1875H5.65625L5.9375 17.9375C8.29167 15.0208 11.5625 13.5625 15.75 13.5625C19.8125 13.5625 23.0208 15.0938 25.375 18.1562C27.75 21.2188 28.9375 25.4792 28.9375 30.9375V31.4688ZM23.1562 30.8125C23.1562 27 22.3438 23.9896 20.7188 21.7812C19.0938 19.5729 16.8646 18.4688 14.0312 18.4688C10.5312 18.4688 7.90625 20.0208 6.15625 23.125V39.2812C7.88542 42.3646 10.5312 43.9062 14.0938 43.9062C16.8646 43.9062 19.0625 42.8125 20.6875 40.625C22.3333 38.4167 23.1562 35.1458 23.1562 30.8125ZM50.3438 48.625C45.7604 48.625 42.0312 47.125 39.1562 44.125C36.2812 41.1042 34.8438 37.0729 34.8438 32.0312V30.9688C34.8438 27.6146 35.4792 24.625 36.75 22C38.0417 19.3542 39.8333 17.2917 42.125 15.8125C44.4375 14.3125 46.9375 13.5625 49.625 13.5625C54.0208 13.5625 57.4375 15.0104 59.875 17.9062C62.3125 20.8021 63.5312 24.9479 63.5312 30.3438V32.75H40.625C40.7083 36.0833 41.6771 38.7812 43.5312 40.8438C45.4062 42.8854 47.7812 43.9062 50.6562 43.9062C52.6979 43.9062 54.4271 43.4896 55.8438 42.6562C57.2604 41.8229 58.5 40.7188 59.5625 39.3438L63.0938 42.0938C60.2604 46.4479 56.0104 48.625 50.3438 48.625ZM49.625 18.3125C47.2917 18.3125 45.3333 19.1667 43.75 20.875C42.1667 22.5625 41.1875 24.9375 40.8125 28H57.75V27.5625C57.5833 24.625 56.7917 22.3542 55.375 20.75C53.9583 19.125 52.0417 18.3125 49.625 18.3125ZM75.7188 14.1875L75.9062 18.4375C78.4896 15.1875 81.8646 13.5625 86.0312 13.5625C93.1771 13.5625 96.7812 17.5938 96.8438 25.6562V48H91.0625V25.625C91.0417 23.1875 90.4792 21.3854 89.375 20.2188C88.2917 19.0521 86.5938 18.4688 84.2812 18.4688C82.4062 18.4688 80.7604 18.9688 79.3438 19.9688C77.9271 20.9688 76.8229 22.2812 76.0312 23.9062V48H70.25V14.1875H75.7188ZM104.156 30.8125C104.156 25.625 105.385 21.4583 107.844 18.3125C110.302 15.1458 113.521 13.5625 117.5 13.5625C121.458 13.5625 124.594 14.9167 126.906 17.625V0H132.688V48H127.375L127.094 44.375C124.781 47.2083 121.562 48.625 117.438 48.625C113.521 48.625 110.323 47.0208 107.844 43.8125C105.385 40.6042 104.156 36.4167 104.156 31.25V30.8125ZM109.938 31.4688C109.938 35.3021 110.729 38.3021 112.312 40.4688C113.896 42.6354 116.083 43.7188 118.875 43.7188C122.542 43.7188 125.219 42.0729 126.906 38.7812V23.25C125.177 20.0625 122.521 18.4688 118.938 18.4688C116.104 18.4688 113.896 19.5625 112.312 21.75C110.729 23.9375 109.938 27.1771 109.938 31.4688ZM140.156 30.7812C140.156 27.4688 140.802 24.4896 142.094 21.8438C143.406 19.1979 145.219 17.1562 147.531 15.7188C149.865 14.2812 152.521 13.5625 155.5 13.5625C160.104 13.5625 163.823 15.1562 166.656 18.3438C169.51 21.5312 170.938 25.7708 170.938 31.0625V31.4688C170.938 34.7604 170.302 37.7188 169.031 40.3438C167.781 42.9479 165.979 44.9792 163.625 46.4375C161.292 47.8958 158.604 48.625 155.562 48.625C150.979 48.625 147.26 47.0312 144.406 43.8438C141.573 40.6562 140.156 36.4375 140.156 31.1875V30.7812ZM145.969 31.4688C145.969 35.2188 146.833 38.2292 148.562 40.5C150.312 42.7708 152.646 43.9062 155.562 43.9062C158.5 43.9062 160.833 42.7604 162.562 40.4688C164.292 38.1562 165.156 34.9271 165.156 30.7812C165.156 27.0729 164.271 24.0729 162.5 21.7812C160.75 19.4688 158.417 18.3125 155.5 18.3125C152.646 18.3125 150.344 19.4479 148.594 21.7188C146.844 23.9896 145.969 27.2396 145.969 31.4688Z" fill="black"/>
+                            </svg>
+                        
+                    </div>
+                    <div class="col m-5">
+                        <h1>HEAVYBIT</h1>
+                        <p>INDUSTRIES</p>
+                    </div>
+                    <div class="col m-5">
+                        <div>
+                            <h3 class="text-danger">P R O D U C T</h3>
+                            <h3>COLLECTIVE</h3>
+                        </div>
+                        
+                    </div>
+                    <div class="col m-5">
+                        <div>
+                            <h3>Cleardit</h3>
+                        </div>
+                    </div>
+                </div>                                                                                    
+
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione similique quis laborum esse id, accusamus, optio dolore eum sequi neque obcaecati natus ut. Reprehenderit eaque obcaecati aperiam iure perspiciatis quis.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur possimus laborum exercitationem reiciendis error itaque consectetur aut, voluptates accusantium quam dolorum enim beatae ducimus quasi perspiciatis! Earum, possimus provident. Quisquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus cum error voluptate dolorum accusamus deserunt, expedita cumque in impedit. Voluptates, illum ducimus. Cum hic ab aperiam ad labore consequuntur quos?</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <p><b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque odit ex consectetur eligendi non praesentium omnis quibusdam pariatur harum. Numquam facilis alias commodi laborum</b></p>
+                <div class="d-flex">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://media.gettyimages.com/photos/studio-waist-up-portrait-of-a-beautiful-businesswoman-with-crossed-picture-id1180926773?s=612x612" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text text-center">Sam <br/> Richara</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://image.shutterstock.com/image-photo/casually-handsome-confident-young-man-260nw-439433326.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text text-center">Kyle payar</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="bg-dark text-white p-4 d-flex">
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem itaque dolores a, laboriosam excepturi repellendus quaerat ratione qui odio tempora, fugit enim. Modi, hic! Dolorem odit ipsam vitae cumque unde.</p>
+
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary">SAM@Ov.vc</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h1 class="mt-5 text-center"><b>INTRODUCTION</b></h1>
+        <div class="d-flex justify-content-center align-content-center">
+            <p ><b >our base of responses grew </b></p>
+            <p class="percent text-white ps-3 pe-3"><b>70%</b></p>
+            <p><b>over last year</b></p>
+        </div>
+        <p><b>Facts about respondents: </b></p>
+        <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, fuga!</li>
+            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo repellat temporibus beatae dignissimos laborum id ipsam expedita obcaecati iste, vero similique dolores perferendis ipsa quasi? In itaque tempore nihil temporibus.</li>
+        </ul>
+    </section>
+
+    <section class="pain_chart container d-flex justify-content-center align-content-center">
+        <div id="piechart" style="width: 500px; height: 400px;"></div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h1 class="mt-3"><b>PLG ADOPTION :</b></h1>
+            <h1><b>PRODUCT-LED GROWTH</b></h1>
+            <h1><b>IS OFFICIALLY <span class="bg-warning">THE TREND OF 2021</span></b></h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum voluptate accusantium vel tenetur aliquam expedita atque id repellendus beatae inventore sint adipisci tempora autem accusamus quia, maxime exercitationem delectus nam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, ipsam, assumenda adipisci eum sint modi tenetur quidem, totam vitae et esse vero in? Exercitationem, non! Dolorem quibusdam placeat in labore?</p>
+            <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur quasi sunt accusamus porro! Fuga nobis ab, assumenda ex blanditiis, unde natus exercitationem reiciendis, maiores quod dolorum velit amet accusantium possimus!</p>
+
+            <table>
+                <tr class="bg-dark text-white">
+                  <th>Growth Rate</th>
+                  <th>2020 Free/Trial</th>
+                  <th>2021 Free/Trial</th>
+                </tr>
+                <tr>
+                  <td>Low</td>
+                  <td>41%</td>
+                  <td>44%</td>
+                </tr>
+                <tr>
+                  <td>High</td>
+                  <td>49%</td>
+                  <td>49%</td>
+                </tr>
+              </table>
+
+              <p class="mt-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, corporis.</p>
+              <p >Lorem ipsum, dolor sit amet consectetur <span class="bg-dark text-white">adipisicing elit.</span> Esse, corporis.</p>
+
+        </div>
+
+    </section>
+
+    <section class="logo container">
+        <div class="row">
+            <h1 class="col">New Relic</h1>
+            <h1 class="col">Servicen<span class="servicenow_color">o</span>w</h1>
+            <h1 class="col servicenow_color">NUTANIX</h1>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row bg-white mt-5">
+                 <div class="col-md-6 p-5">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus rerum, odit cum sed perspiciatis fugiat distinctio deserunt mollitia velit sequi atque impedit explicabo voluptatum, quasi voluptates magni officia! Magnam, impedit.</p>
+
+                    <p>Ridoy</p>
+                    <p>web developer</p>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                            </a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                 </div>
+                 <div class="col-md-6 p-5">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA6e0M1vRP6ZbafxG-z7Bd7MVtpX7iytjBTQ&usqp=CAU" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text text-center">Jason</p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="the_key">
+        <div class="container mt-5">
+            <div class="bg-white d-flex justify-content-center align-content-center">
+                <div class="p-5">
+                    <div class="d-flex justify-content-center align-content-center">
+                        <h1 class="text-center">The </h1>
+                        <h1 class="text-center key text-white me-2 ms-2 pe-3 ps-3"> Key </h1> 
+                        <h1 class="text-center"> Takeaway</h1>
+                    </div>
+                    <h1 class="text-center"><b>PLG IS HOT RIGHT NOW.</b></h1>
+                    <h1 class="text-center"><button type="button" class="btn btn-outline-dark">CLICK HERE TO READ MORE</button></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mt-5">
+            <div>
+                <h1><b>BUT ADOPTERS CAN</b></h1>
+                <h1><b>STILL BE <span class="bg-dark me-2 ms-2 pe-3 ps-3 text-white">IMPOSTERS</span></b></h1>
+                <h1><b><span class="bg-warning">AND NOT EVEN KNOW IT</span></b></h1>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi commodi fugiat animi molestias saepe enim consequuntur aut repellat, facere praesentium, ut rem, recusandae odit dolorum mollitia quaerat quae expedita ullam?</p>
+
+                <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni consectetur, tempore eligendi quam vel quas at qui iste doloribus nulla, incidunt officiis cum assumenda minima. Tempora repudiandae dolor fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias harum eligendi sequi nobis quasi totam minima dolorem voluptatum iusto neque cum deserunt unde ipsum, maiores dolores laboriosam a ratione deleniti?</p>
+                <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni consectetur, tempore eligendi quam vel quas at qui iste doloribus nulla, incidunt officiis cum assumenda minima. Tempora repudiandae dolor fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                <ul>
+                    <li>
+                        <b>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae neque molestias reiciendis odit iure commodi voluptas perspiciatis quae iste distinctio hic, qui voluptatum, alias facilis magnam eligendi! Possimus, dolores facere!
+                        </b>
+                    </li>
+                    <li class="mt-3">
+                        <b>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae neque molestias reiciendis odit iure commodi voluptas perspiciatis quae iste distinctio hic, qui voluptatum, alias facilis magnam eligendi! Possimus, dolores facere!
+                        </b>
+                    </li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quos consequatur non, et porro natus tempora mollitia doloremque facilis quis, odit error cumque laboriosam. Sed soluta quae repudiandae unde facere.</p>
+
+                <p><b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate minima laudantium nemo commodi maxime</b></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 p-5">
+                    <h1 class="text-center">PQL</h1>
+                    <div class="progress">
+                        YES<div class="progress-bar ms-2 me-2" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div> NO
+                      </div>
+                      <div class="progress mt-3">
+                        YES<div class="progress-bar ms-2 me-2" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div> NO
+                      </div>
+                </div>
+                <div class="col-md-6 p-5">
+                    <h1 class="text-center">ACTIVATION</h1>
+                    <div class="progress">
+                        YES<div class="progress-bar ms-2 me-2" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div> NO
+                      </div>
+                      <div class="progress mt-3">
+                        YES<div class="progress-bar ms-2 me-2" role="progressbar" style="width: 55%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">55%</div> NO
+                      </div>
+                </div>
+            </div>
+            <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+    </section>
+
+    <section class="the_key">
+        <div class="container mt-5">
+            <div class="bg-white d-flex justify-content-center align-content-center">
+                <div class="p-5">
+                    <div class="d-flex justify-content-center align-content-center">
+                        <h1 class="text-center">The </h1>
+                        <h1 class="text-center key text-white me-2 ms-2 pe-3 ps-3"> Key </h1> 
+                        <h1 class="text-center"> Takeaway</h1>
+                    </div>
+                    <h4 class="text-center"><b>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</b></h4>
+                    <h1 class="text-center"><button type="button" class="btn btn-outline-dark">CLICK HERE TO READ MORE</button></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mt-5">
+            <h1><b>PLG IS A <span class="bg-warning">REQUIREMENT</span></b></h1>
+            <h1><b>IF YOU'RE SELLING TO</b></h1>
+            <h1><b>DEVELOPERS</b></h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi impedit sunt nemo cupiditate veritatis temporibus laboriosam odit, assumenda, exercitationem dolores, quaerat commodi ad. Quaerat iste enim aliquid omnis, officia delectus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, aut voluptate? Eos maiores, praesentium amet odio consequatur iste. Unde minus libero velit delectus, sit dolore facere nam hic vitae obcaecati.</p>
+                    <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia fuga veniam distinctio autem vitae in voluptatem architecto, eum incidunt corporis officiis totam iure praesentium, dolores exercitationem ex cum provident magni.</p>
+                </div>
+                <div class="col-md-6">
+                    <div id="piechart_3d" style="width: 500px; height: 300px;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="the_key">
+        <div class="container mt-5">
+            <div class="bg-white d-flex justify-content-center align-content-center">
+                <div class="p-5">
+                    <div class="d-flex justify-content-center align-content-center">
+                        <h1 class="text-center">The </h1>
+                        <h1 class="text-center key text-white me-2 ms-2 pe-3 ps-3"> Key </h1> 
+                        <h1 class="text-center"> Takeaway</h1>
+                    </div>
+                    <h4 class="text-center"><b>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</b></h4>
+                    <h1 class="text-center"><button type="button" class="btn btn-outline-dark">CLICK HERE TO READ MORE</button></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="d-flex justify-content-center align-content-center mt-5">
+                <div id="columnchart_material" style="width: 800px; height: 500px;"></div>
+            </div>
+            <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptatibus, non ipsum atque quaerat ea nostrum praesentium officia inventore fugiat obcaecati cumque tempore doloremque quam doloribus perspiciatis deserunt consequuntur eum.</p>
+        </div>
+    </section>
+
+    <section class="the_key">
+        <div class="container mt-5">
+            <div class="bg-white d-flex justify-content-center align-content-center">
+                <div class="p-5">
+                    <div class="d-flex justify-content-center align-content-center">
+                        <h1 class="text-center">The </h1>
+                        <h1 class="text-center key text-white me-2 ms-2 pe-3 ps-3"> Key </h1> 
+                        <h1 class="text-center"> Takeaway</h1>
+                    </div>
+                    <h4 class="text-center"><b>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</b></h4>
+                    <h1 class="text-center"><button type="button" class="btn btn-outline-dark">CLICK HERE TO READ MORE</button></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mt-5">
+            <h1><b>DITCHING MARKETING</b></h1>
+            <h1><b>IS A <span class="bg-warning">BAD IDEA</span></b></h1>
+            <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit minima, veritatis error harum eveniet autem laudantium eius dolorem optio pariatur quis obcaecati quo quas repudiandae est? A sed quam ut.</p>
+            <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nulla enim accusantium quasi ea magni quos delectus impedit aliquam! Rem, quibusdam suscipit ipsa aut nulla vero dolores. Dolor, hic vero. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam ducimus sit quisquam molestiae porro voluptate omnis suscipit dolor aut, eos aliquid vitae quae, quaerat totam. Optio inventore unde doloribus repellendus.</p>
+            <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quo id dolorem asperiores iusto iste aspernatur animi tenetur aliquid!</p>
+            <div class="d-flex justify-content-center align-content-center">
+                <div id="donutchart" style="width: 500px; height: 300px;"></div>
+            </div>
+            <p class="mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, mollitia enim asperiores quibusdam, aperiam nihil iste, omnis quam distinctio neque dicta perferendis aliquid quas ipsum saepe nostrum autem quaerat molestias? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eaque non dignissimos libero? Voluptatum ut saepe fugiat et eligendi? Qui adipisci autem numquam doloribus quae ipsa, aliquid sequi. Nesciunt, architecto.</p>
+        </div>
+    </section>
+
+    <section class="the_key">
+        <div class="container mt-5">
+            <div class="bg-white d-flex justify-content-center align-content-center">
+                <div class="p-5">
+                    <div class="d-flex justify-content-center align-content-center">
+                        <h1 class="text-center">The </h1>
+                        <h1 class="text-center key text-white me-2 ms-2 pe-3 ps-3"> Key </h1> 
+                        <h1 class="text-center"> Takeaway</h1>
+                    </div>
+                    <h4 class="text-center"><b>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</b></h4>
+                    <h1 class="text-center"><button type="button" class="btn btn-outline-dark">CLICK HERE TO READ MORE</button></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mt-5">
+            <h1><b>CONVERSION IS</b></h1>
+            <h1><b><span class="bg-warning">NOW A TEAM</span> SPORT</b></h1>
+            <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, delectus?</p>
+            <p class="mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta aut impedit exercitationem repellendus ad dolorum nulla voluptas cupiditate amet illum est, laudantium perferendis ratione ipsum, architecto quis voluptatem? Reiciendis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut beatae dolore odit deserunt. Ipsam ad illo, sunt reprehenderit quia eaque est blanditiis maiores, veritatis officiis soluta eos distinctio error ipsum?</p>
+            <div class="bg-white mt-3">
+                <div class="row">
+                    <div class="col-md-6 p-5">
+                        <h4 class="text-center">MEDIAN</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+                          </div>
+                    </div>
+                    <div class="col-md-6 p-5">
+                        <h4 class="text-center">THIRD QUARTILE</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80%</div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-6 col-sm-12">
+                    <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto neque rem minima ipsam laborum dolore quos, quibusdam obcaecati veritatis perspiciatis voluptatum autem impedit optio nesciunt totam dolorem consequuntur qui officiis.</b></p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt reiciendis optio voluptate labore ad ex, sint porro repudiandae quidem, qui ab omnis tempore illum error ipsam ut perferendis ipsum sed!</p>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div id="donutchart2" style="width: 500px; height: 300px;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="the_key">
+        <div class="container mt-5">
+            <div class="bg-white d-flex justify-content-center align-content-center">
+                <div class="p-5">
+                    <div class="d-flex justify-content-center align-content-center">
+                        <h1 class="text-center">The </h1>
+                        <h1 class="text-center key text-white me-2 ms-2 pe-3 ps-3"> Key </h1> 
+                        <h1 class="text-center"> Takeaway</h1>
+                    </div>
+                    <h4 class="text-center"><b>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</b></h4>
+                    <h1 class="text-center"><button type="button" class="btn btn-outline-dark">CLICK HERE TO READ MORE</button></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mt-5">
+            <h1 class="d-flex justify-content-center align-content-center">
+                <button type="button" class="btn btn-outline-dark">Download the Full Report</button>
+                
+            </h1>
+            <div class="under_line m-5"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2>CLEANVIEW</h2>
+            <div class="row">
+                <div class="col-md-3 col-sm-12">
+                    <p><b>ABOUT</b></p>
+                    <p><a href="#">Companies</a></p>
+                    <p><a href="#">People</a></p>
+                    <p><a href="#">Blog</a></p>
+                    <p><a href="#">Press Room</a></p>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <p><b>CAREERS</b></p>
+                    <p><a href="#">Refer a Friend</a></p>
+                    <p><a href="#">Talent Network</a></p>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <p><b>LP LOGIN</b></p>
+                    <p><a href="#">Provacy Policy</a></p>
+                    <p><a href="#">Terms Of Use</a></p>
+                    <p><a href="#">D&I Policy</a></p>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <p><b>CONNECT</b></p>
+                    <p>01865557883</p>
+                    <p>303 Congress st, 6th Floor</p>
+                    <p>cumilla, Bangladesh</p>
+                </div>
+            </div>
+            <div class="m-5">
+                <p class="text-center">@ Copyright 2010-2021 CleanViewVenture Partners</p>
+                <p class="text-center">CleanView @ nad CleanViewLabs @ are registered trademarks thar are used under license by CleanView Venture Partners. All Rights Reserved.</p> 
+            </div>
+        </div>
+    </footer>
+
+
+    
+
+
+    
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'My skills'],
+          ['React',     20],
+          ['HTML',      25],
+          ['CSS',  25],
+          ['js', 15],
+          ['Node',    10]
+        ]);
+
+        var options = {
+          title: 'ASS'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Dev-Focused',     67],
+          ['Saas',      46]
+        ]);
+
+        var options = {
+          title: 'My Daily Activities',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Median organic',     50],
+          ['Median paid soles Generated',      24],
+          ['Median other',  26]
+        ]);
+
+        var options = {
+          title: 'PGL',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['Sales',     47],
+        ['Success',      25],
+        ['Support',  12],
+        ['Ohter', 16]
+        ]);
+
+        var options = {
+        title: '',
+        pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart2'));
+        chart.draw(data, options);
+    }
+    </script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+    google.charts.load('current', {'packages':['bar']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+        ['Reproting to', '2020', '2021'],
+        ['CEO', 1000, 400],
+        ['Product', 1170, 460],
+        ['sales', 660, 1120],
+        ['other', 1030, 540]
+        ]);
+
+        var options = {
+        chart: {
+            // title: 'Company Performance',
+            // subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+        }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+    }
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</body>
+</html>
